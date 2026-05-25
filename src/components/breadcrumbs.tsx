@@ -58,7 +58,7 @@ export function Breadcrumbs() {
   ]
 
   if (categoryName && view !== 'home') {
-    items.push({ label: categoryName, active: view === 'home' && !!selectedCategory })
+      items.push({ label: categoryName, active: !!selectedCategory })
   }
 
   const viewLabel = getViewLabel()
