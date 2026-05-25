@@ -1,5 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
@@ -64,7 +65,6 @@ model CartItem {
   product   Product  @relation(fields: [productId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
   @@unique([cartId, productId])
 }
 
